@@ -61,7 +61,7 @@
     .nav-links a:hover { color: var(--accent); background: rgba(0,0,0,0.05); }
     .nav-links a::after { display: none; }
     .nav-cta { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.35rem 0.85rem; background: var(--accent); color: #fff; text-decoration: none; border-radius: 999px; transition: background 0.2s; }
-    .nav-cta:hover { background: var(--highlight); }
+    .nav-cta:hover { background: #333; }
     .hero {
       min-height: 100vh;
       display: flex; flex-direction: column; justify-content: center;
@@ -143,8 +143,10 @@
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     @media (max-width: 768px) {
-      nav { top: 0.75rem; gap: 0.15rem; padding: 0.25rem 0.3rem; }
-      .nav-links { display: none; }
+      nav { top: 0.75rem; gap: 0.1rem; padding: 0.25rem 0.3rem; }
+      .nav-logo { display: none; }
+      .nav-links a { font-size: 0.62rem; padding: 0.3rem 0.6rem; letter-spacing: 0.04em; }
+      .nav-cta { font-size: 0.62rem; padding: 0.3rem 0.6rem; }
       .hero { padding: 7rem 1.5rem 3rem; }
       .hero-inner { flex-direction: column-reverse; gap: 2rem; }
       .hero-photo { width: 220px; height: 220px; }
@@ -177,6 +179,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#work">Experience</a></li>
     <li><a href="#projects">Work</a></li>
+    <li><a href="#playground">Playground</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Contact</a>
 </nav>
@@ -302,9 +305,23 @@
 </section>
 
 
-<div class="physics-wrap">
+
+<section id="contact">
+  <div class="section-label">04 — Contact</div>
+  <div class="contact-box reveal">
+    <h2>Open to new roles in Copenhagen.</h2>
+    <p>PM positions in FinTech, RegTech, compliance, and B2B SaaS. Available now.</p>
+    <div class="contact-links">
+      <a href="mailto:koy.chea@gmail.com" class="btn">koy.chea@gmail.com</a>
+      <a href="https://www.linkedin.com/in/daront-chea" target="_blank" class="btn btn-ghost">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+
+<div class="physics-wrap" id="playground">
   <div class="physics-header">
-    <div class="section-label" style="margin-bottom:0.5rem;">04 — Throw My Skills Around</div>
+    <div class="section-label" style="margin-bottom:0.5rem;">05 — Playground</div>
     <div style="display:flex; justify-content:space-between; align-items:center;">
       <p class="physics-hint">Click to pop a skill · Drag to throw</p>
       <button class="skills-reset" id="skills-reset">Reset</button>
@@ -317,19 +334,6 @@
     <span class="legend-item"><span class="legend-swatch" style="background:#e8e8e8;border:1px solid #bbb"></span>Domain</span>
   </div>
 </div>
-
-<section id="contact">
-  <div class="section-label">05 — Contact</div>
-  <div class="contact-box reveal">
-    <h2>Open to new roles in Copenhagen.</h2>
-    <p>PM positions in FinTech, RegTech, compliance, and B2B SaaS. Available now.</p>
-    <div class="contact-links">
-      <a href="mailto:koy.chea@gmail.com" class="btn">koy.chea@gmail.com</a>
-      <a href="https://www.linkedin.com/in/daront-chea" target="_blank" class="btn btn-ghost">LinkedIn</a>
-    </div>
-  </div>
-</section>
-
 <footer>
   <span>2026 Koy Daront Chea</span>
   <span>Copenhagen, Denmark</span>
