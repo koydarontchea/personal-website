@@ -20,13 +20,14 @@
       --sans: 'Space Grotesk', sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
       background: var(--bg);
       color: var(--text);
       font-family: var(--sans);
       line-height: 1.6;
       overflow-x: hidden;
+      width: 100%;
     }
     body::before {
       content: '';
@@ -145,13 +146,21 @@
       .hero-inner { flex-direction: column-reverse; gap: 2rem; }
       .hero-photo { width: 220px; height: 220px; }
       .hero-scroll { display: none; }
-      section { padding: 3.5rem 1.5rem; }
+      section { padding: 3.5rem 1.5rem; width: 100%; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .about-grid > * { min-width: 0; }
+      .stats-grid { width: 100%; }
+      .stats-grid > * { min-width: 0; }
+      .stat { padding: 1.25rem; }
+      .stat-number { font-size: 2.4rem; }
+      .work-list > * { min-width: 0; }
       .projects-grid { grid-template-columns: 1fr; }
+      .projects-grid > * { min-width: 0; }
       .skills-grid { grid-template-columns: 1fr; }
       .contact-box { padding: 2.5rem 1.5rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
       .physics-header { padding: 4rem 1.5rem 1.5rem; }
+      .physics-legend { padding: 1rem 1.5rem; flex-wrap: wrap; }
       .skill-pill { font-size: 11px; padding: 0 14px; height: 32px; line-height: 32px; }
       .matter-box { height: 700px; }
     }
