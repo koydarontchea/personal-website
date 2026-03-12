@@ -144,6 +144,7 @@
       .hero { padding: 7rem 1.5rem 3rem; }
       .hero-inner { flex-direction: column-reverse; gap: 2rem; }
       .hero-photo { width: 220px; height: 220px; }
+      .hero-scroll { display: none; }
       section { padding: 3.5rem 1.5rem; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .projects-grid { grid-template-columns: 1fr; }
@@ -151,6 +152,8 @@
       .contact-box { padding: 2.5rem 1.5rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
       .physics-header { padding: 4rem 1.5rem 1.5rem; }
+      .skill-pill { font-size: 11px; padding: 0 14px; height: 32px; line-height: 32px; }
+      .matter-box { height: 700px; }
     }
   </style>
 </head>
@@ -419,7 +422,7 @@ document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.obser
     });
 
     requestAnimationFrame(function() {
-      var GAP = 10, BH = 48;
+      var GAP = 10, BH = (skillElems[0] ? skillElems[0].el.offsetHeight : 48);
       var rows = [[]], rowWidths = [0];
 
       skillElems.forEach(function(item) {
